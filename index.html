@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrea Mosca — Economist</title>
+  <meta name="description" content="Andrea Mosca — Post Doctoral Researcher at the University of Bergamo. Political Economy, Gender Violence, Behavioural Economics, Sports Economics.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Mobile hamburger -->
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- ── SIDEBAR ── -->
+<nav id="sidebar">
+  <a href="#home" class="nav-name" onclick="go('home')">Andrea Mosca</a>
+  <div class="nav-role">Economist</div>
+
+  <ul>
+    <li><a href="#home" onclick="go('home')" id="nav-home" class="active">Home</a></li>
+    <li>
+      <a href="#research" onclick="go('research')" id="nav-research">Research</a>
+      <a href="#research" onclick="go('research')" id="nav-research-pub" class="sub">Publications</a>
+      <a href="#working" onclick="go('working')" id="nav-working" class="sub">Working papers</a>
+    </li>
+    <li><a href="#teaching" onclick="go('teaching')" id="nav-teaching">Teaching</a></li>
+    <li><a href="#contacts" onclick="go('contacts')" id="nav-contacts">Contacts</a></li>
+  </ul>
+
+  <div class="nav-bottom">University of Bergamo<br>Dept. of Economics</div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="home-grid">
+      <div>
+        <h1>Andrea Mosca</h1>
+        <p>
+          Welcome. I am a Post Doctoral Researcher at the
+          <a href="https://dse.unibg.it/en" target="_blank">Department of Economics</a>
+          at the <a href="https://en.unibg.it/" target="_blank">University of Bergamo</a>.
+        </p>
+        <p>
+          My research sits at the intersection of Political Economy, Gender Violence,
+          Behavioural Economics and Sports Economics. I combine administrative microdata
+          with quasi-experimental methods to study how institutions, incentives and social
+          norms shape individual behaviour and economic outcomes.
+        </p>
+        <p>
+          Feel free to <a href="#contacts" onclick="go('contacts')">get in touch</a> for
+          questions, comments or potential collaborations.
+        </p>
+
+        <div class="links-row">
+          <a class="ext-link" href="https://scholar.google.com/citations?user=EOe9By8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a class="ext-link" href="https://drive.google.com/file/d/14cMD-5iz6ExMHh4_EwccqPWH8K8oOZ41/view?usp=sharing" target="_blank">Curriculum Vitae</a>
+        </div>
+      </div>
+
+      <!-- Replace src with your photo path, e.g. src="photo.jpg" -->
+      <div class="home-photo-placeholder" id="photo-area">PHOTO</div>
+    </div>
+
+    <h2>Upcoming &amp; recent talks</h2>
+    <table class="talks">
+      <tr>
+        <td>Sep 2025</td>
+        <td>37th Annual Conference of the Italian Association of Public Economics (SIEP) — University of Naples Federico II, Italy</td>
+      </tr>
+      <tr>
+        <td>Aug 2025</td>
+        <td>40th Annual Meeting of the European Economic Association (EEA) — Bordeaux School of Economics, France</td>
+      </tr>
+      <tr>
+        <td>Jun 2025</td>
+        <td>6th World Labor Conference (SOLE–EALE–AASLE) — Toronto, Canada</td>
+      </tr>
+      <tr>
+        <td>Apr 2025</td>
+        <td>52nd Annual Conference of the European Public Choice Society (EPCS) — Stockholm School of Economics in Riga, Latvia</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="page" id="page-research">
+    <h1>Research</h1>
+
+    <h2>Published articles</h2>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Tax Cuts and Tax Compliance: Evidence from Grants to Green Municipalities</span>
+        <span class="badge badge-forth">Forthcoming</span>
+      </div>
+      <div class="pub-meta">Fiscal Studies, 2026 (forthcoming)</div>
+      <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract &amp; presentations
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This work examines whether a tax cut can increase tax compliance. To achieve identification,
+          we leverage a quasi-natural experiment occurring in Italy: since 2016, a regional law has granted
+          a reduction in the waste tax burden for inhabitants of municipalities with an efficient waste
+          collection system. Using municipal balance sheets data, a matched control group of non-treated
+          municipalities, and staggered difference-in-differences strategies, results demonstrate that the
+          share of tax compliance observed in municipalities benefiting from the tax reduction increased
+          relative to the matched non-treated municipalities (ATT = 6.4 percent). Robustness and
+          falsification tests confirm that our findings are specific to waste taxation remittances and
+          pertain exclusively to the subsidized municipalities.
+        </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>65th Annual Conference of the Italian Economic Association (SIE) — University of Urbino, Italy, 2024</li>
+            <li>51st Annual Meeting of the European Public Choice Society (EPCS) — Vienna University of Economics, Austria, 2024</li>
+            <li>35th Annual Conference of the Italian Society for Public Economics (SIEP) — University of Verona, Italy, 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Female Political Representation and Budget Forecast Errors</span>
+        <span class="badge badge-pub">Published</span>
+      </div>
+      <div class="pub-meta"><a href="https://www.sciencedirect.com/science/article/pii/S0176268025001260" target="_blank">European Journal of Political Economy</a>, 2025, 90, p.102766</div>
+      <div class="pub-authors">with De Benedetto M. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract &amp; presentations
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This paper examines how female representation in municipal executive boards — the primary budgetary
+          decision-making bodies in Italian local governments — affects both the accuracy and bias of budget
+          forecasts. We exploit Law 56/2014, which mandated gender quotas in municipalities with more than
+          3,000 residents, to identify causal effects. Using an instrumental variable approach, we find that
+          a one-percentage-point increase in the share of female aldermen reduces expenditure and revenue
+          forecast errors by 0.5 and 0.4 percent, respectively, and systematically mitigates the prevailing
+          optimistic bias in projections, particularly in pre-election years. Mechanism analyses highlight
+          two main channels: (i) higher levels of technical competence and (ii) lower scope for political
+          manipulation, with the strongest effects observed in social spending and in regions with weaker
+          accountability.
+        </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>66th Annual Conference SIE — University of Naples Parthenope, Italy, 2025</li>
+            <li>37th Annual Conference SIEP — University of Naples Federico II, Italy, 2025</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Enhancing the Understanding of Income Inequality among Italian Municipalities: The Role of Environmental Risk</span>
+        <span class="badge badge-pub">Published</span>
+      </div>
+      <div class="pub-meta">Italian Economic Journal, 2025, pp.1–86</div>
+      <div class="pub-authors">with Errico L. and Rondinella S.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This study investigates the relationship between environmental risk exposure and income inequality
+          across Italian municipalities. Drawing on administrative data, we document novel evidence on how
+          natural and man-made hazards shape distributional outcomes at the local level.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Ethnic Minorities and Income Inequality: The Albanian Community in Italy</span>
+        <span class="badge badge-pub">Published</span>
+      </div>
+      <div class="pub-meta">Journal of Economic Studies, 2025, 52(1), pp.38–54</div>
+      <div class="pub-authors">with Errico L. and Rondinella S.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This paper analyzes the relationship between the presence of Albanian immigrants and income
+          inequality across Italian municipalities. Using administrative microdata, we document that
+          settlement patterns of the Albanian community are systematically associated with distributional
+          outcomes, contributing to the broader literature on immigration and inequality.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Home Advantage and Referee Gender Differences: Evidence from Major Women's Leagues</span>
+        <span class="badge badge-pub">Published</span>
+        <span class="badge badge-award">Editor's Choice</span>
+      </div>
+      <div class="pub-meta">Journal of Neuroscience, Psychology, and Economics, 2024, 17(3–4), p.145</div>
+      <div class="pub-authors">with Errico L., Ferrari D., Morabito L. and Rondinella S.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This paper investigates home advantage and potential gender differences in referee behaviour
+          across major women's football leagues. Findings provide evidence on how contextual and social
+          factors shape officiating decisions in professional women's sport. Awarded with the Editor's
+          Choice selection.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">The Effect of Priming Student Identity on IQ-Test Score: Evidence from a Randomized Control Trial</span>
+        <span class="badge badge-pub">Published</span>
+      </div>
+      <div class="pub-meta">Italian Economic Journal, 2023, 10(2), pp.733–759</div>
+      <div class="pub-authors">with Ordine P. and Rose G.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          Using a randomized controlled trial, this paper examines whether priming participants with their
+          student identity prior to an IQ test affects performance. Results provide causal evidence on the
+          role of identity salience in cognitive outcomes, with implications for understanding stereotype
+          threat and identity-driven behaviour in educational settings.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">University-Court Proximity: What Are the Effects on the Legal System Performance?</span>
+        <span class="badge badge-pub">Published</span>
+      </div>
+      <div class="pub-meta">Regional Economy, 2023, 7(Q1), pp.21–33</div>
+      <div class="pub-authors">with Errico L. and Rondinella S.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">▶</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This paper investigates whether geographic proximity between universities and courts affects
+          the efficiency of the legal system. Using Italian regional data, we find evidence that knowledge
+          spillovers from higher education institutions positively influence judicial performance indicators.
+        </p>
+      </div>
+    </div>
+
+    <!-- WORKING PAPERS -->
+    <h2 id="working-anchor">Working papers</h2>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Help-Seeking After Gender-Based Violence: The Role of Local Female Political Representation</span>
+        <span class="badge badge-rr">R&R</span>
+      </div>
+      <div class="pub-meta"><em>European Journal of Political Economy</em> (Re-Submitted)</div>
+      <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">The Political Economy of Femicides: Local Spending Responses, Electoral Incentives and Nationality Bias</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Work against Gender Violence: The Effect of Incentives to Victims' Employment on Accesses to Anti-Violence Centers</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with Ordine P. and Rose G.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Soccer Matches as Emotional Stressors and Intimate Partner Violence: Evidence from Daily AVC Admissions</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with De Luca D., <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">War, Identity, and Referee Bias: Evidence from Professional Football</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with De Luca D., Ferrari D., <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a> and Samà F.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Aligning Finance with Sustainability: Evidence from Banks</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with Yılmaz I., Rondinella S. and Silipo D.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">The Role of Natural Hazard on Income Inequality</span>
+        <span class="badge badge-rev">Under Review</span>
+        <span class="badge badge-award">F. Pastore Award</span>
+      </div>
+      <div class="pub-authors">with Errico L. and Rondinella S.</div>
+    </div>
+
+    <!-- WORK IN PROGRESS -->
+    <h2>Work in progress</h2>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Voting After Gendered Shocks: The Impact of Femicides on Electoral Preferences</span>
+        <span class="badge badge-wip">In progress</span>
+      </div>
+      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+    </div>
+
+  </section>
+
+  <!-- TEACHING -->
+  <section class="page" id="page-teaching">
+    <h1>Teaching</h1>
+    <p style="color:var(--ink-light); font-size:0.92rem;">
+      Below is an overview of my teaching activities. Please feel free to
+      <a href="#contacts" onclick="go('contacts')">contact me</a> for syllabi or further information.
+    </p>
+
+    <h2>University of Bergamo</h2>
+
+    <h3>Current courses</h3>
+
+    <div class="course-item">
+      <div class="course-name">Economics and Management of Sport</div>
+      <div class="course-meta">Bachelor's degree · Department of Economics · a.y. 2024–25</div>
+    </div>
+
+    <div class="course-item">
+      <div class="course-name">Microeconomics</div>
+      <div class="course-meta">Bachelor's degree · Department of Economics · a.y. 2024–25</div>
+    </div>
+
+    <h3>Past courses</h3>
+
+    <div class="course-item">
+      <div class="course-name">Econometrics</div>
+      <div class="course-meta">Master's degree · Department of Economics</div>
+    </div>
+
+    <p style="margin-top:2rem; font-size:0.85rem; color:var(--ink-muted); font-style:italic;">
+      Teaching information is indicative. Please update with your actual courses and years.
+    </p>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="page" id="page-contacts">
+    <h1>Contacts</h1>
+
+    <p style="font-size:0.92rem; color:var(--ink-light); margin-bottom:1.5rem;">
+      I welcome inquiries from students, collaborators and policy practitioners.
+    </p>
+
+    <div class="contact-grid">
+      <span class="contact-label">Email</span>
+      <span><a href="mailto:andrea.mosca@unibg.it">andrea.mosca@unibg.it</a></span>
+
+      <span class="contact-label">Address</span>
+      <span>Department of Economics<br>University of Bergamo<br>Via dei Caniana 2, 24127 Bergamo, Italy</span>
+
+      <span class="contact-label">Scholar</span>
+      <span><a href="https://scholar.google.com/citations?user=EOe9By8AAAAJ&hl=en" target="_blank">Google Scholar profile</a></span>
+
+      <span class="contact-label">CV</span>
+      <span><a href="https://drive.google.com/file/d/14cMD-5iz6ExMHh4_EwccqPWH8K8oOZ41/view?usp=sharing" target="_blank">Download PDF</a></span>
+    </div>
+
+    <p style="margin-top:2.5rem; font-size:0.85rem; color:var(--ink-muted); font-style:italic;">
+      Please update email address and office details as needed.
+    </p>
+  </section>
+
+</main>
+
+<script>
+const pages = ['home','research','teaching','contacts'];
+
+function go(page) {
+  pages.forEach(p => {
+    const el = document.getElementById('page-' + p);
+    const navEl = document.getElementById('nav-' + p);
+    if (el) el.classList.toggle('active', p === page);
+    if (navEl) navEl.classList.toggle('active', p === page);
+  });
+  document.getElementById('nav-research-pub').classList.toggle('active', page === 'research');
+  document.getElementById('nav-working').classList.toggle('active', page === 'working');
+  window.scrollTo(0, 0);
+  closeMobile();
+  history.pushState({}, '', '#' + page);
+}
+
+function goWorking() {
+  go('research');
+  setTimeout(() => {
+    const el = document.getElementById('working-anchor');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 50);
+}
+
+document.getElementById('nav-working').addEventListener('click', function(e) {
+  e.preventDefault();
+  goWorking();
+});
+
+function togglePub(btn) {
+  const item = btn.closest('.pub-item');
+  const exp = item.querySelector('.pub-expandable');
+  const arrow = btn.querySelector('.toggle-arrow');
+  const open = exp.classList.toggle('open');
+  arrow.classList.toggle('open', open);
+  btn.querySelector('span:last-child') && null;
+}
+
+function closeMobile() {
+  document.getElementById('sidebar').classList.remove('open');
+}
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('sidebar').classList.toggle('open');
+});
+
+// Handle initial hash
+const hash = location.hash.replace('#','');
+if (pages.includes(hash)) go(hash);
+</script>
+</body>
+</html>
