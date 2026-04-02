@@ -9,16 +9,13 @@
 </head>
 <body>
 
-<!-- Mobile hamburger -->
 <button class="hamburger" id="hamburger" aria-label="Menu">
   <span></span><span></span><span></span>
 </button>
 
-<!-- ── SIDEBAR ── -->
 <nav id="sidebar">
   <a href="#home" class="nav-name" onclick="go('home')">Andrea Mosca</a>
   <div class="nav-role">Economist</div>
-
   <ul>
     <li><a href="#home" onclick="go('home')" id="nav-home" class="active">Home</a></li>
     <li>
@@ -29,14 +26,12 @@
     <li><a href="#teaching" onclick="go('teaching')" id="nav-teaching">Teaching</a></li>
     <li><a href="#contacts" onclick="go('contacts')" id="nav-contacts">Contacts</a></li>
   </ul>
-
   <div class="nav-bottom">University of Bergamo<br>Dept. of Economics</div>
 </nav>
 
-<!-- ── MAIN ── -->
 <main>
 
-  <!-- HOME -->
+  <!-- ══ HOME ══ -->
   <section class="page active" id="page-home">
     <div class="home-grid">
       <div>
@@ -56,14 +51,13 @@
           Feel free to <a href="#contacts" onclick="go('contacts')">get in touch</a> for
           questions, comments or potential collaborations.
         </p>
-
         <div class="links-row">
           <a class="ext-link" href="https://scholar.google.com/citations?user=EOe9By8AAAAJ&hl=en" target="_blank">Google Scholar</a>
           <a class="ext-link" href="https://drive.google.com/file/d/14cMD-5iz6ExMHh4_EwccqPWH8K8oOZ41/view?usp=sharing" target="_blank">Curriculum Vitae</a>
         </div>
       </div>
-
-      <!-- Replace src with your photo path, e.g. src="photo.jpg" -->
+      <!-- To add your photo: save it as photo.jpg in the same folder, then replace the div below with:
+           <img src="photo.jpg" alt="Andrea Mosca" class="home-photo"> -->
       <div class="home-photo-placeholder" id="photo-area">PHOTO</div>
     </div>
 
@@ -88,33 +82,33 @@
     </table>
   </section>
 
-  <!-- RESEARCH -->
+  <!-- ══ RESEARCH ══ -->
   <section class="page" id="page-research">
     <h1>Research</h1>
 
     <h2>Published articles</h2>
 
+    <!-- 1. Tax Cuts -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Tax Cuts and Tax Compliance: Evidence from Grants to Green Municipalities</span>
         <span class="badge badge-forth">Forthcoming</span>
       </div>
-      <div class="pub-meta">Fiscal Studies, 2026 (forthcoming)</div>
+      <div class="pub-meta">Fiscal Studies (forthcoming)</div>
       <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract &amp; presentations
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          This work examines whether a tax cut can increase tax compliance. To achieve identification,
-          we leverage a quasi-natural experiment occurring in Italy: since 2016, a regional law has granted
-          a reduction in the waste tax burden for inhabitants of municipalities with an efficient waste
-          collection system. Using municipal balance sheets data, a matched control group of non-treated
-          municipalities, and staggered difference-in-differences strategies, results demonstrate that the
-          share of tax compliance observed in municipalities benefiting from the tax reduction increased
-          relative to the matched non-treated municipalities (ATT = 6.4 percent). Robustness and
-          falsification tests confirm that our findings are specific to waste taxation remittances and
-          pertain exclusively to the subsidized municipalities.
+          This work examines whether a policy-induced reduction in a salient local tax can increase tax compliance.
+          To achieve identification, we leverage a quasi-natural experiment occurring in Italy: since 2016, a regional
+          law has granted a reduction in the waste tax burden for inhabitants of municipalities with an efficient waste
+          collection system. Using municipal balance sheets data, a matched control group of non-treated municipalities,
+          and staggered difference-in-differences strategies, results show that, in this specific institutional setting,
+          the share of tax compliance in municipalities benefiting from the tax reduction increased relative to matched
+          non-treated municipalities (ATT = 6.4 percent). Robustness and falsification tests confirm that our findings
+          are specific to waste taxation remittances and pertain exclusively to the subsidized municipalities.
         </p>
         <div class="conf-list">
           <p>Presentations</p>
@@ -127,6 +121,7 @@
       </div>
     </div>
 
+    <!-- 2. Female political representation -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Female Political Representation and Budget Forecast Errors</span>
@@ -135,31 +130,31 @@
       <div class="pub-meta"><a href="https://www.sciencedirect.com/science/article/pii/S0176268025001260" target="_blank">European Journal of Political Economy</a>, 2025, 90, p.102766</div>
       <div class="pub-authors">with De Benedetto M. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract &amp; presentations
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
       </button>
       <div class="pub-expandable">
         <p class="abstract">
           This paper examines how female representation in municipal executive boards — the primary budgetary
           decision-making bodies in Italian local governments — affects both the accuracy and bias of budget
-          forecasts. We exploit Law 56/2014, which mandated gender quotas in municipalities with more than
-          3,000 residents, to identify causal effects. Using an instrumental variable approach, we find that
-          a one-percentage-point increase in the share of female aldermen reduces expenditure and revenue
-          forecast errors by 0.5 and 0.4 percent, respectively, and systematically mitigates the prevailing
-          optimistic bias in projections, particularly in pre-election years. Mechanism analyses highlight
-          two main channels: (i) higher levels of technical competence and (ii) lower scope for political
-          manipulation, with the strongest effects observed in social spending and in regions with weaker
-          accountability.
+          forecasts. We exploit Law 56/2014, which mandated gender quotas in municipalities with more than 3,000
+          residents, to identify causal effects. Using an instrumental variable approach, we find that a
+          one-percentage-point increase in the share of female aldermen reduces expenditure and revenue forecast
+          errors by 0.5 and 0.4 percent, respectively, and systematically mitigates the prevailing optimistic
+          bias in projections, particularly in pre-election years. Mechanism analyses highlight two main channels:
+          (i) higher levels of technical competence and (ii) lower scope for political manipulation, with the
+          strongest effects observed in social spending and in regions with weaker accountability.
         </p>
         <div class="conf-list">
           <p>Presentations</p>
           <ul>
-            <li>66th Annual Conference SIE — University of Naples Parthenope, Italy, 2025</li>
-            <li>37th Annual Conference SIEP — University of Naples Federico II, Italy, 2025</li>
+            <li>66th Annual Conference of the Italian Economic Association (SIE) — University of Naples Parthenope, Italy, 2025</li>
+            <li>37th Annual Conference of the Italian Society for Public Economics (SIEP) — University of Naples Federico II, Italy, 2025</li>
           </ul>
         </div>
       </div>
     </div>
 
+    <!-- 3. Environmental risk -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Enhancing the Understanding of Income Inequality among Italian Municipalities: The Role of Environmental Risk</span>
@@ -168,17 +163,26 @@
       <div class="pub-meta">Italian Economic Journal, 2025, pp.1–86</div>
       <div class="pub-authors">with Errico L. and Rondinella S.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract
+        <span class="toggle-arrow">&#9658;</span> Abstract
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          This study investigates the relationship between environmental risk exposure and income inequality
-          across Italian municipalities. Drawing on administrative data, we document novel evidence on how
-          natural and man-made hazards shape distributional outcomes at the local level.
+          This study examines the relationship between environmental risks — such as hydrogeological hazards,
+          landslides, volcanic zones, and earthquakes — and income inequality across Italian municipalities,
+          using a comprehensive dataset from 2010 to 2020. Our analysis reveals that municipalities exposed to
+          higher risks, particularly from hydrogeological and landslide hazards, exhibit significantly higher
+          levels of income inequality. Conversely, earthquake risk, notably in Southern Italy, is associated
+          with lower levels of inequality, likely attributable to its disproportionate impact on wealthier
+          individuals, who are more susceptible to real estate and investment losses, further exacerbated by
+          the economic uncertainty associated with such hazards. These findings underscore the importance of
+          focused mitigation strategies and effective communication policies aimed not only at minimizing the
+          physical impacts of these hazards but also at addressing the economic uncertainties they engender,
+          thereby fostering more equitable economic outcomes.
         </p>
       </div>
     </div>
 
+    <!-- 4. Albanian community -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Ethnic Minorities and Income Inequality: The Albanian Community in Italy</span>
@@ -187,39 +191,53 @@
       <div class="pub-meta">Journal of Economic Studies, 2025, 52(1), pp.38–54</div>
       <div class="pub-authors">with Errico L. and Rondinella S.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract
+        <span class="toggle-arrow">&#9658;</span> Abstract
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          This paper analyzes the relationship between the presence of Albanian immigrants and income
-          inequality across Italian municipalities. Using administrative microdata, we document that
-          settlement patterns of the Albanian community are systematically associated with distributional
-          outcomes, contributing to the broader literature on immigration and inequality.
+          This study explores whether ethnic minorities exhibit varying levels of income inequality compared to
+          the host population. The research leverages a unique immigration event in Italy, specifically the
+          settlement of multiple Albanian groups in southern Italy during the 16th century. This historical
+          occurrence enables an investigation into the role of cultural traits in income inequality, as these
+          groups are situated in the same geographical region and often share borders. The results, which remain
+          consistent after undergoing various robustness checks, indicate that Albanian villages, while still
+          preserving their identity and tradition, tend to experience an approximately 2% lower level of income
+          concentration compared to similar Italian municipalities. Our findings aim to provide supporting
+          evidence for future policy considerations regarding the long-term impact of immigration on income
+          inequality.
         </p>
       </div>
     </div>
 
+    <!-- 5. Home advantage women's leagues -->
     <div class="pub-item">
       <div class="pub-title-row">
-        <span class="pub-title">Home Advantage and Referee Gender Differences: Evidence from Major Women's Leagues</span>
+        <span class="pub-title">Home Advantage, Crowding, and Gender Referee: Evidence from Major Women's Leagues</span>
         <span class="badge badge-pub">Published</span>
         <span class="badge badge-award">Editor's Choice</span>
       </div>
       <div class="pub-meta">Journal of Neuroscience, Psychology, and Economics, 2024, 17(3–4), p.145</div>
       <div class="pub-authors">with Errico L., Ferrari D., Morabito L. and Rondinella S.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract
+        <span class="toggle-arrow">&#9658;</span> Abstract
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          This paper investigates home advantage and potential gender differences in referee behaviour
-          across major women's football leagues. Findings provide evidence on how contextual and social
-          factors shape officiating decisions in professional women's sport. Awarded with the Editor's
-          Choice selection.
+          This article explores the presence of home advantage concerning both team performance and referee
+          decisions in major women's soccer leagues. Specifically, we investigate whether this phenomenon is
+          associated with crowding, using stadium attendance density as an explanatory factor, moving beyond
+          the binary distinction between open and closed doors. Drawing on a unique dataset spanning various
+          women's soccer leagues from 2018 to 2023, our findings indicate that teams in densely populated
+          stadiums demonstrate enhanced performance across all examined indicators. This underscores the
+          significance of stadium noise, rather than merely the presence of fans, in influencing home team
+          performance. Additionally, a slight home advantage in terms of referee decisions is observed
+          exclusively in matches officiated by male referees, regardless of stadium crowds. This suggests that
+          male referees may experience heightened home pressure compared to their female counterparts.
         </p>
       </div>
     </div>
 
+    <!-- 6. Priming -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">The Effect of Priming Student Identity on IQ-Test Score: Evidence from a Randomized Control Trial</span>
@@ -228,18 +246,29 @@
       <div class="pub-meta">Italian Economic Journal, 2023, 10(2), pp.733–759</div>
       <div class="pub-authors">with Ordine P. and Rose G.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          Using a randomized controlled trial, this paper examines whether priming participants with their
-          student identity prior to an IQ test affects performance. Results provide causal evidence on the
-          role of identity salience in cognitive outcomes, with implications for understanding stereotype
-          threat and identity-driven behaviour in educational settings.
+          This work evaluates whether by rendering more salient to students their own student identity it is
+          possible to increase their effort and performance in an IQ-test. The idea is based on the assumption
+          that individuals' behaviour is often influenced by cues that work subconsciously and prime them to
+          behave in certain ways. By implementing a randomized control trial on students of two universities
+          in two European countries — namely the University of Essex (UK) and the University of Calabria
+          (Italy) — we report that students primed with pictures and videos targeted to render their student
+          identity more salient obtain higher IQ-test scores than students exposed to neutral pictures/videos.
         </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>37th Conference of the Italian Association of Labour Economics (AIEL)</li>
+            <li>XXXV European Society for Population Economics (ESPE)</li>
+          </ul>
+        </div>
       </div>
     </div>
 
+    <!-- 7. University-Court -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">University-Court Proximity: What Are the Effects on the Legal System Performance?</span>
@@ -248,24 +277,27 @@
       <div class="pub-meta">Regional Economy, 2023, 7(Q1), pp.21–33</div>
       <div class="pub-authors">with Errico L. and Rondinella S.</div>
       <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">▶</span> Abstract
+        <span class="toggle-arrow">&#9658;</span> Abstract
       </button>
       <div class="pub-expandable">
         <p class="abstract">
-          This paper investigates whether geographic proximity between universities and courts affects
-          the efficiency of the legal system. Using Italian regional data, we find evidence that knowledge
-          spillovers from higher education institutions positively influence judicial performance indicators.
+          This paper investigates whether and to what extent the proximity of the court location and the nearest
+          university affect court productivity. We exploit data from the Italian Ministry of Justice during the
+          period 2014–2021 by considering the length of proceedings as the outcome variable. Results show that
+          the average time to conclude legal proceedings increases as the distance between courts and universities
+          increases. However, only courts located in the Centre-North of Italy benefit from the spatial spillovers
+          deriving from the proximity to the university.
         </p>
       </div>
     </div>
 
-    <!-- WORKING PAPERS -->
+    <!-- ══ WORKING PAPERS ══ -->
     <h2 id="working-anchor">Working papers</h2>
 
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Help-Seeking After Gender-Based Violence: The Role of Local Female Political Representation</span>
-        <span class="badge badge-rr">R&R</span>
+        <span class="badge badge-rr">R&amp;R</span>
       </div>
       <div class="pub-meta"><em>European Journal of Political Economy</em> (Re-Submitted)</div>
       <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
@@ -281,10 +313,27 @@
 
     <div class="pub-item">
       <div class="pub-title-row">
-        <span class="pub-title">Work against Gender Violence: The Effect of Incentives to Victims' Employment on Accesses to Anti-Violence Centers</span>
-        <span class="badge badge-rev">Under Review</span>
+        <span class="pub-title">Work against Violence Against Women: The Case of Employment Incentives to Victims Hosted by Anti-Violence Centers</span>
+        <span class="badge badge-rev">Submitted</span>
       </div>
       <div class="pub-authors">with Ordine P. and Rose G.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">&#9658;</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This study analyzes whether active policy measures aimed at improving employment opportunities for women
+          who are victims of intimate partner violence might lead to a reduction in the number of violent episodes.
+          The empirical study exploits a temporary reform in Italian policy which, in 2018, provided financial
+          incentives to firms established as social cooperatives for the permanent hiring of women who were victims
+          of violence and involved in a recovery program at an anti-violence center. Identification is achieved by
+          exploiting the fact that these firms are distributed across Italian provinces with a high degree of
+          heterogeneity. The main result shows that after the introduction of the reform the number of recurring
+          cases registered in anti-violence centers decreased most where there is a greater presence of incentivized
+          firms. Victims' economic empowerment, improvement in household income and a reduction in exposure time
+          are all channels consistent with this result.
+        </p>
+      </div>
     </div>
 
     <div class="pub-item">
@@ -298,8 +347,9 @@
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">War, Identity, and Referee Bias: Evidence from Professional Football</span>
-        <span class="badge badge-rev">Under Review</span>
+        <span class="badge badge-forth">Forthcoming</span>
       </div>
+      <div class="pub-meta">Journal of Neuroscience, Psychology, and Economics (forthcoming)</div>
       <div class="pub-authors">with De Luca D., Ferrari D., <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a> and Samà F.</div>
     </div>
 
@@ -309,72 +359,127 @@
         <span class="badge badge-rev">Under Review</span>
       </div>
       <div class="pub-authors">with Yılmaz I., Rondinella S. and Silipo D.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          To align the bank's business and portfolio with the UN Sustainable Development Goals and the Paris
+          Climate Agreement, the United Nations launched in 2019 the UN Principles for Sustainable Banking.
+          More than half of the banking industry worldwide adhered to the principles. We build up a dataset
+          which includes all the banks that adhered to the UN Principles (277) and a sample of 669 peer
+          nonmember banks from 77 countries to study what are the determinants and effects of membership on
+          banking behavior and performance. The results show that larger, listed and riskier banks are more
+          likely to join the UN Principles. In contrast, a higher intensity of CO&#8322; (CO&#8322;/GDP) of the country,
+          climate-related natural disasters, public awareness of global warming, or the Paris agreement do not
+          stimulate the likelihood of adherence. Interestingly, a higher bank's market power decreases the
+          incentive to join the UN Principles. The behaviour and performance of member banks relative to
+          non-members did not change significantly upon membership. Member banks overstate their green language
+          in the annual report in relation to their behaviour and ESG performance, although only 27% of them
+          reveal information about the CO&#8322; content of their loans. Overall, the paper suggests that current
+          UN Principles do not spur the green transition and highlights the symbolic nature of voluntary green
+          commitments in banking.
+        </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>2025 World Finance Conference</li>
+            <li>66th Annual Conference of the Italian Economic Association (SIE)</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">The Role of Natural Hazard on Income Inequality</span>
-        <span class="badge badge-rev">Under Review</span>
         <span class="badge badge-award">F. Pastore Award</span>
       </div>
       <div class="pub-authors">with Errico L. and Rondinella S.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This study investigates the relationship between environmental risks and income inequality within
+          Italian municipalities, utilising data spanning from 2010 to 2020. Specifically, leveraging a unique
+          dataset drawing upon various sources, we analyse the impact of environmental hazards such as
+          hydrogeological risks, landslides, volcanic zones, and earthquakes on income distribution. Our
+          findings suggest that municipalities facing heightened environmental risks tend to exhibit increased
+          income inequality, with results being driven by hydrogeological risks, landslides, and volcanic zones.
+          On the other hand, earthquake risk appears to alleviate income inequality, particularly in the South
+          of the country. Our results underscore the significance of preventive and communication measures not
+          only in mitigating the impact of such natural hazards but also in managing the associated economic
+          uncertainty.
+        </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>XXIII AISSEC Scientific Conference</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <!-- WORK IN PROGRESS -->
-    <h2>Work in progress</h2>
 
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Voting After Gendered Shocks: The Impact of Femicides on Electoral Preferences</span>
+        <span class="badge badge-rev">Under Review</span>
+      </div>
+      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+    </div>
+
+    <!-- ══ WORK IN PROGRESS ══ -->
+    <h2>Work in progress</h2>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Pathways out of Violence: Evidence on the Role of a Temporary Cash Transfer to Victims of Abuse in Italy</span>
+        <span class="badge badge-award">VisitINPS Fellowship 2024</span>
+      </div>
+      <div class="pub-authors">with Bhalotra S., Ordine P., Rose G. and Rubolino E.</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">The Backlash Effect of Gender Quota Laws: Female Political Representation and Femicide</span>
         <span class="badge badge-wip">In progress</span>
       </div>
       <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
     </div>
 
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Mafia Penetration and Budget Forecast Errors</span>
+        <span class="badge badge-wip">In progress</span>
+      </div>
+      <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+    </div>
+
   </section>
 
-  <!-- TEACHING -->
+  <!-- ══ TEACHING ══ -->
   <section class="page" id="page-teaching">
     <h1>Teaching</h1>
     <p style="color:var(--ink-light); font-size:0.92rem;">
-      Below is an overview of my teaching activities. Please feel free to
-      <a href="#contacts" onclick="go('contacts')">contact me</a> for syllabi or further information.
+      Feel free to <a href="#contacts" onclick="go('contacts')">contact me</a> for syllabi or further information.
     </p>
 
-    <h2>University of Bergamo</h2>
-
-    <h3>Current courses</h3>
+    <h2>Universit&#224; Magna Graecia di Catanzaro</h2>
 
     <div class="course-item">
-      <div class="course-name">Economics and Management of Sport</div>
-      <div class="course-meta">Bachelor's degree · Department of Economics · a.y. 2024–25</div>
+      <div class="course-name">Economics of Crime</div>
+      <div class="course-meta">a.y. 2023&#8211;2024 &nbsp;&middot;&nbsp; 2024&#8211;2025 &nbsp;&middot;&nbsp; 2025&#8211;2026</div>
     </div>
 
-    <div class="course-item">
-      <div class="course-name">Microeconomics</div>
-      <div class="course-meta">Bachelor's degree · Department of Economics · a.y. 2024–25</div>
-    </div>
-
-    <h3>Past courses</h3>
-
-    <div class="course-item">
-      <div class="course-name">Econometrics</div>
-      <div class="course-meta">Master's degree · Department of Economics</div>
-    </div>
-
-    <p style="margin-top:2rem; font-size:0.85rem; color:var(--ink-muted); font-style:italic;">
-      Teaching information is indicative. Please update with your actual courses and years.
-    </p>
   </section>
 
-  <!-- CONTACTS -->
+  <!-- ══ CONTACTS ══ -->
   <section class="page" id="page-contacts">
     <h1>Contacts</h1>
-
     <p style="font-size:0.92rem; color:var(--ink-light); margin-bottom:1.5rem;">
       I welcome inquiries from students, collaborators and policy practitioners.
     </p>
-
     <div class="contact-grid">
       <span class="contact-label">Email</span>
       <span><a href="mailto:andrea.mosca@unibg.it">andrea.mosca@unibg.it</a></span>
@@ -388,10 +493,6 @@
       <span class="contact-label">CV</span>
       <span><a href="https://drive.google.com/file/d/14cMD-5iz6ExMHh4_EwccqPWH8K8oOZ41/view?usp=sharing" target="_blank">Download PDF</a></span>
     </div>
-
-    <p style="margin-top:2.5rem; font-size:0.85rem; color:var(--ink-muted); font-style:italic;">
-      Please update email address and office details as needed.
-    </p>
   </section>
 
 </main>
@@ -432,7 +533,6 @@ function togglePub(btn) {
   const arrow = btn.querySelector('.toggle-arrow');
   const open = exp.classList.toggle('open');
   arrow.classList.toggle('open', open);
-  btn.querySelector('span:last-child') && null;
 }
 
 function closeMobile() {
@@ -443,7 +543,6 @@ document.getElementById('hamburger').addEventListener('click', function() {
   document.getElementById('sidebar').classList.toggle('open');
 });
 
-// Handle initial hash
 const hash = location.hash.replace('#','');
 if (pages.includes(hash)) go(hash);
 </script>
