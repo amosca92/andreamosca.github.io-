@@ -21,7 +21,7 @@
     <li>
       <a href="#research" onclick="go('research')" id="nav-research">Research</a>
       <a href="#research" onclick="go('research')" id="nav-research-pub" class="sub">Publications</a>
-      <a href="#working" onclick="go('working')" id="nav-working" class="sub">Working papers</a>
+      <a href="#working-anchor" id="nav-working" class="sub">Working papers</a>
     </li>
     <li><a href="#teaching" onclick="go('teaching')" id="nav-teaching">Teaching</a></li>
     <li><a href="#contacts" onclick="go('contacts')" id="nav-contacts">Contacts</a></li>
@@ -58,13 +58,13 @@
       </div>
       <img src="WhatsApp Image 2026-04-01 at 13.03.10.jpeg" alt="Andrea Mosca" class="home-photo">
     </div>
-
+  </section>
 
   <!-- ══ RESEARCH ══ -->
   <section class="page" id="page-research">
     <h1>Research</h1>
 
-    <h2>Published articles</h2>
+    <h2>Publications</h2>
 
     <!-- 1. Tax Cuts -->
     <div class="pub-item">
@@ -128,7 +128,44 @@
       </div>
     </div>
 
-    <!-- 3. Female political representation -->
+
+    <!-- 3. Help-Seeking — moved from working papers to forthcoming -->
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Help-Seeking After Gender-Based Violence: The Role of Local Female Political Representation</span>
+        <span class="badge badge-forth">Forthcoming</span>
+      </div>
+      <div class="pub-meta">European Journal of Political Economy (forthcoming)</div>
+      <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          Using data from Italy's largest network of anti-violence centers (AVCs), this study investigates whether
+          increased female representation in local politics affects women's access to formal support services after
+          experiencing gender-based violence. We focus on access to AVCs, as it represents a concrete step and a
+          potential turning point toward escaping violence — distinct from more informal or exploratory forms of
+          help-seeking. Exploiting staggered elections and the introduction of gender quotas as a natural experiment,
+          we adopt a shift-share instrumental variable strategy to address endogeneity. We find that greater female
+          political representation significantly increases the likelihood that women — especially those who are
+          younger or unemployed — take this first step by seeking support from AVCs. The effect is concentrated
+          among first-time users and in municipalities closer to an AVC. These findings are not driven by increased
+          violence or changes in AVC funding.
+        </p>
+        <div class="conf-list">
+          <p>Presentations</p>
+          <ul>
+            <li>6th World Labor Conference (SOLE&#8211;EALE&#8211;AASLE) — Toronto, Canada, June 2025</li>
+            <li>100th Annual Conference of the Western Economic Association International (WEAI) — San Francisco, USA, 2025</li>
+            <li>52nd Annual Meeting of the European Public Choice Society (EPCS) — Stockholm School of Economics in Riga, Latvia, 2025</li>
+            <li>36th Annual Conference of the Italian Society for Public Economics (SIEP) — University of Cagliari, Italy, 2024</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Female political representation -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Female Political Representation and Budget Forecast Errors</span>
@@ -301,49 +338,13 @@
     <!-- ══ WORKING PAPERS ══ -->
     <h2 id="working-anchor">Working papers</h2>
 
-    <!-- WP1: Help-Seeking R&R — FIRST -->
-    <div class="pub-item">
-      <div class="pub-title-row">
-        <span class="pub-title">Help-Seeking After Gender-Based Violence: The Role of Local Female Political Representation</span>
-        <span class="badge badge-rr">R&amp;R</span>
-      </div>
-      <div class="pub-meta"><em>European Journal of Political Economy</em> (Re-Submitted)</div>
-      <div class="pub-authors">with <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a>, Ordine P. and Rose G.</div>
-      <button class="toggle-btn" onclick="togglePub(this)">
-        <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
-      </button>
-      <div class="pub-expandable">
-        <p class="abstract">
-          Using data from Italy's largest network of anti-violence centers (AVCs), this study investigates whether
-          increased female representation in local politics affects women's access to formal support services after
-          experiencing gender-based violence. We focus on access to AVCs, as it represents a concrete step and a
-          potential turning point toward escaping violence — distinct from more informal or exploratory forms of
-          help-seeking. Exploiting staggered elections and the introduction of gender quotas as a natural experiment,
-          we adopt a shift-share instrumental variable strategy to address endogeneity. We find that greater female
-          political representation significantly increases the likelihood that women — especially those who are
-          younger or unemployed — take this first step by seeking support from AVCs. The effect is concentrated
-          among first-time users and in municipalities closer to an AVC. These findings are not driven by increased
-          violence or changes in AVC funding.
-        </p>
-        <div class="conf-list">
-          <p>Presentations</p>
-          <ul>
-            <li>6th World Labor Conference (SOLE&#8211;EALE&#8211;AASLE) — Toronto, Canada, June 2025</li>
-            <li>100th Annual Conference of the Western Economic Association International (WEAI) — San Francisco, USA, 2025</li>
-            <li>52nd Annual Meeting of the European Public Choice Society (EPCS) — Stockholm School of Economics in Riga, Latvia, 2025</li>
-            <li>36th Annual Conference of the Italian Society for Public Economics (SIEP) — University of Cagliari, Italy, 2024</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <!-- WP2: Political Economy of Femicides -->
     <div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">The Political Economy of Femicides: Local Spending Responses, Electoral Incentives and Nationality Bias</span>
         <span class="badge badge-rev">Under Review</span>
       </div>
-      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+      <div class="pub-authors">with <a href="https://sites.google.com/view/pbuonanno/" target="_blank">Buonanno P.</a> and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
       <button class="toggle-btn" onclick="togglePub(this)">
         <span class="toggle-arrow">&#9658;</span> Abstract &amp; presentations
       </button>
@@ -374,7 +375,7 @@
         <span class="pub-title">Voting After Gendered Shocks: The Impact of Femicides on Electoral Preferences</span>
         <span class="badge badge-rev">Under Review</span>
       </div>
-      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+      <div class="pub-authors">with <a href="https://sites.google.com/view/pbuonanno/" target="_blank">Buonanno P.</a> and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
       <button class="toggle-btn" onclick="togglePub(this)">
         <span class="toggle-arrow">&#9658;</span> Abstract
       </button>
@@ -488,6 +489,30 @@
       </div>
     </div>
 
+    <!-- WP8: Identity and racial bias -->
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Identity and Racial Bias in Professional Football: Evidence from Refereeing Decisions</span>
+        <span class="badge badge-rev">Submitted</span>
+      </div>
+      <div class="pub-authors">with De Luca D., Ferrari D. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+      <button class="toggle-btn" onclick="togglePub(this)">
+        <span class="toggle-arrow">&#9658;</span> Abstract
+      </button>
+      <div class="pub-expandable">
+        <p class="abstract">
+          This paper studies whether disciplinary sanctions in European professional football differ systematically by player race.
+          Using player&#8211;match data from UEFA Champions League and Europa League competitions, we show that Black players are more likely than otherwise comparable non&#8211;Black players to receive both yellow and red cards.
+          In our preferred specification, the gap is about 1.2 percentage points for yellow cards and 0.18 percentage points for red cards.
+          We find no meaningful difference in net fouls committed, suggesting that observable on&#8211;field conduct alone is unlikely to account for the sanctioning gap.
+          We then examine whether this differential varies across contexts.
+          Identity&#8211;related proximity between referee and player does not reveal a systematic pattern of heterogeneity, while the yellow&#8211;card gap is larger among Black players with conflict&#8211;related background, consistent with a possible behavioral channel.
+          Additional results show that VAR and home advantage do not systematically reduce the gap.
+          Overall, the paper documents a persistent sanctioning gap by player race in a highly regulated sporting environment.
+        </p>
+      </div>
+    </div>
+
     <!-- WP7: Natural Hazard — solo premio -->
     <div class="pub-item">
       <div class="pub-title-row">
@@ -536,7 +561,7 @@
         <span class="pub-title">The Backlash Effect of Gender Quota Laws: Female Political Representation and Femicide</span>
         <span class="badge badge-wip">In progress</span>
       </div>
-      <div class="pub-authors">with Buonanno P. and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
+      <div class="pub-authors">with <a href="https://sites.google.com/view/pbuonanno/" target="_blank">Buonanno P.</a> and <a href="https://www.pasqualegiacobbe.com/home-page" target="_blank">Giacobbe P.</a></div>
     </div>
 
     <div class="pub-item">
@@ -634,7 +659,11 @@ document.getElementById('hamburger').addEventListener('click', function() {
 });
 
 const hash = location.hash.replace('#','');
-if (pages.includes(hash)) go(hash);
+if (hash === 'working' || hash === 'working-anchor') {
+  goWorking();
+} else if (pages.includes(hash)) {
+  go(hash);
+}
 </script>
 </body>
 </html>
