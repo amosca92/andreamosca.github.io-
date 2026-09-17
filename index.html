@@ -22,9 +22,7 @@
     <li>
       <a href="#research" onclick="go('research')" id="nav-research">Research</a>
       <a href="#working" id="nav-working" class="sub">Working papers</a>
-      <a href="#permanent-working-papers" id="nav-permanent" class="sub">Permanent working papers</a>
       <a href="#work-in-progress" id="nav-wip" class="sub">Work in progress</a>
-      <a href="#resting-papers" id="nav-resting" class="sub">Resting papers</a>
     </li>
     <li><a href="#teaching" onclick="go('teaching')" id="nav-teaching">Teaching</a></li>
     <li><a href="#contacts" onclick="go('contacts')" id="nav-contacts">Contacts</a></li>
@@ -698,7 +696,7 @@
 
 <script>
 const pages = ['home','publications','research','teaching','contacts'];
-const researchSubnav = ['nav-working', 'nav-permanent', 'nav-wip', 'nav-resting'];
+const researchSubnav = ['nav-working', 'nav-wip'];
 
 function setResearchSubnav(activeId) {
   researchSubnav.forEach(id => {
@@ -735,19 +733,9 @@ document.getElementById('nav-working').addEventListener('click', function(e) {
   goResearchSection('working-anchor', 'nav-working', 'working');
 });
 
-document.getElementById('nav-permanent').addEventListener('click', function(e) {
-  e.preventDefault();
-  goResearchSection('permanent-anchor', 'nav-permanent', 'permanent-working-papers');
-});
-
 document.getElementById('nav-wip').addEventListener('click', function(e) {
   e.preventDefault();
   goResearchSection('wip-anchor', 'nav-wip', 'work-in-progress');
-});
-
-document.getElementById('nav-resting').addEventListener('click', function(e) {
-  e.preventDefault();
-  goResearchSection('resting-anchor', 'nav-resting', 'resting-papers');
 });
 
 function togglePub(btn) {
