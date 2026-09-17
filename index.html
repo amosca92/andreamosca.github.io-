@@ -18,10 +18,11 @@
   <div class="nav-role">Economist</div>
   <ul>
     <li><a href="#home" onclick="go('home')" id="nav-home" class="active">Home</a></li>
+    <li><a href="#publications" onclick="go('publications')" id="nav-publications">Publications</a></li>
     <li>
       <a href="#research" onclick="go('research')" id="nav-research">Research</a>
-      <a href="#research" onclick="go('research')" id="nav-research-pub" class="sub">Publications</a>
-      <a href="#working-anchor" id="nav-working" class="sub">Working papers</a>
+      <a href="#working" id="nav-working" class="sub">Working papers</a>
+      <a href="#work-in-progress" id="nav-wip" class="sub">Work in progress</a>
     </li>
     <li><a href="#teaching" onclick="go('teaching')" id="nav-teaching">Teaching</a></li>
     <li><a href="#contacts" onclick="go('contacts')" id="nav-contacts">Contacts</a></li>
@@ -63,11 +64,9 @@
     </div>
   </section>
 
-  <!-- ══ RESEARCH ══ -->
-  <section class="page" id="page-research">
-    <h1>Research</h1>
-
-    <h2>Publications</h2>
+  <!-- ══ PUBLICATIONS ══ -->
+  <section class="page" id="page-publications">
+    <h1>Publications</h1>
 
     <!-- 1. Tax Cuts -->
 <div class="pub-item">
@@ -354,10 +353,23 @@
       </div>
     </div>
 
+    <h2>Contributions to Institutional Reports</h2>
+
+    <div class="pub-item">
+      <div class="pub-title-row">
+        <span class="pub-title">Il Reddito di Libert&#224; e l&#8217;autonomia economica delle donne vittime di violenza</span>
+      </div>
+      <div class="pub-meta"><em>XXV Rapporto Annuale INPS</em>, Istituto Nazionale della Previdenza Sociale, 2026</div>
+      <div class="pub-authors">with Bhalotra S., Ordine P., Rose G. and Rubolino E.</div>
+    </div>
+  </section>
+
+  <!-- ══ RESEARCH ══ -->
+  <section class="page" id="page-research">
+    <h1>Research</h1>
+
     <!-- ══ WORKING PAPERS ══ -->
     <h2 id="working-anchor">Working papers</h2>
-
-
 
 <!-- WP3: Voting after gendered shocks -->
 <div class="pub-item">
@@ -622,16 +634,15 @@
     </div>
 
     <!-- ══ WORK IN PROGRESS ══ -->
-    <h2>Work in progress</h2>
+    <h2 id="wip-anchor">Work in progress</h2>
 
-        <div class="pub-item">
+<div class="pub-item">
       <div class="pub-title-row">
         <span class="pub-title">Pathways out of Violence: Evidence on the Role of a Temporary Cash Transfer to Victims of Abuse in Italy</span>
         <span class="badge badge-award">VisitINPS Fellowship 2024</span>
       </div>
       <div class="pub-authors">with Bhalotra S., Ordine P., Rose G. and Rubolino E.</div>
     </div>
-
   </section>
 
   <!-- ══ TEACHING ══ -->
@@ -644,8 +655,13 @@
     <h2>Universit&#224; Magna Graecia di Catanzaro</h2>
 
     <div class="course-item">
+      <div class="course-name">Political Economy</div>
+      <div class="course-meta">a.y. 2026&#8211;2027</div>
+    </div>
+
+    <div class="course-item">
       <div class="course-name">Economics of Crime</div>
-      <div class="course-meta">a.y. 2023&#8211;2024 &nbsp;&middot;&nbsp; 2024&#8211;2025 &nbsp;&middot;&nbsp; 2025&#8211;2026</div>
+      <div class="course-meta">a.y. 2023&#8211;2024 &nbsp;&middot;&nbsp; 2024&#8211;2025 &nbsp;&middot;&nbsp; 2025&#8211;2026 &nbsp;&middot;&nbsp; 2026&#8211;2027</div>
     </div>
   </section>
 
@@ -673,33 +689,47 @@
 </main>
 
 <script>
-const pages = ['home','research','teaching','contacts'];
+const pages = ['home','publications','research','teaching','contacts'];
+const researchSubnav = ['nav-working', 'nav-wip'];
 
-function go(page) {
+function setResearchSubnav(activeId) {
+  researchSubnav.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', id === activeId);
+  });
+}
+
+function go(page, updateHash = true) {
   pages.forEach(p => {
     const el = document.getElementById('page-' + p);
     const navEl = document.getElementById('nav-' + p);
     if (el) el.classList.toggle('active', p === page);
     if (navEl) navEl.classList.toggle('active', p === page);
   });
-  document.getElementById('nav-research-pub').classList.toggle('active', page === 'research');
-  document.getElementById('nav-working').classList.toggle('active', page === 'working');
+  setResearchSubnav(null);
   window.scrollTo(0, 0);
   closeMobile();
-  history.pushState({}, '', '#' + page);
+  if (updateHash) history.pushState({}, '', '#' + page);
 }
 
-function goWorking() {
-  go('research');
+function goResearchSection(anchorId, navId, hashValue) {
+  go('research', false);
+  setResearchSubnav(navId);
   setTimeout(() => {
-    const el = document.getElementById('working-anchor');
+    const el = document.getElementById(anchorId);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }, 50);
+  history.pushState({}, '', '#' + hashValue);
 }
 
 document.getElementById('nav-working').addEventListener('click', function(e) {
   e.preventDefault();
-  goWorking();
+  goResearchSection('working-anchor', 'nav-working', 'working');
+});
+
+document.getElementById('nav-wip').addEventListener('click', function(e) {
+  e.preventDefault();
+  goResearchSection('wip-anchor', 'nav-wip', 'work-in-progress');
 });
 
 function togglePub(btn) {
@@ -720,7 +750,9 @@ document.getElementById('hamburger').addEventListener('click', function() {
 
 const hash = location.hash.replace('#','');
 if (hash === 'working' || hash === 'working-anchor') {
-  goWorking();
+  goResearchSection('working-anchor', 'nav-working', 'working');
+} else if (hash === 'work-in-progress' || hash === 'wip-anchor') {
+  goResearchSection('wip-anchor', 'nav-wip', 'work-in-progress');
 } else if (pages.includes(hash)) {
   go(hash);
 }
