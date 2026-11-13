@@ -274,8 +274,7 @@ a:hover { text-decoration: underline; }
 }
 
 .badge-pub  { background: #e8f0e8; color: #3a6a3a; border: 1px solid #c8dcc8; }
-.badge-forth { background: var(--accent-light); color: var(--accent); border: 1px solid #c8d8f0; }
-.badge-rr   { background: #102a43; color: #ffffff; border: 1px solid #102a43; }
+.badge-forth, .badge-rr { background: var(--accent-light); color: var(--accent); border: 1px solid #c8d8f0; }
 .badge-rev  { background: var(--paper-warm); color: var(--ink-muted); border: 1px solid var(--rule); }
 .badge-wip  { background: #f5eef8; color: #6a3a8a; border: 1px solid #ddc8f0; }
 .badge-award { background: #fdf8e4; color: #8a7020; border: 1px solid #e8e0b0; }
