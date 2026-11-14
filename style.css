@@ -247,6 +247,23 @@ a:hover { text-decoration: underline; }
   min-width: 200px;
 }
 
+.pub-title-row--badges {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 40%);
+  align-items: start;
+}
+
+.pub-title-row--badges > .pub-title,
+.pub-title-row--badges > .pub-badges {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.pub-title-row--badges > .pub-badges {
+  width: 100%;
+  margin-left: 0;
+}
+
 .pub-badges {
   display: flex;
   flex-direction: column;
